@@ -337,7 +337,7 @@
 							"name": "권기읍",
 							"title": "팀장",
 							"avatar": "./signage_src/images/member/member-kge.png",
-							"status": "active",
+							"status": "dispatched",
 							"joinDate": "2019-05-01"
 						},
 						{
