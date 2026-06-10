@@ -1,0 +1,596 @@
+{
+	"executives": [
+		{
+			"id": "exec-001",
+			"name": "이재용",
+			"title": "대표이사",
+			"avatar": "./signage_src/images/member/member_ceo.png",
+			"type": "ceo",
+			"status": "active",
+			"joinDate": "2020-01-01"
+		},
+		{
+			"id": "exec-002",
+			"name": "최철호",
+			"title": "부사장",
+			"avatar": "./signage_src/images/member/member-cch.png",
+			"type": "vp",
+			"status": "active",
+			"joinDate": "2019-03-15"
+		}
+	],
+	"departments": [
+		{
+			"id": "dept-001",
+			"name": "서비스개발실",
+			"color": "service",
+			"head": {
+				"id": "dept-001-head",
+				"name": "정원효",
+				"title": "실장",
+				"avatar": "./signage_src/images/member/member-jwh.png",
+				"status": "active",
+				"joinDate": "2018-06-01"
+			},
+			"teams": [
+				{
+					"id": "team-001-01",
+					"name": "서비스개발 1팀",
+					"members": [
+						{
+							"id": "mem-001-001",
+							"name": "박중배",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-pjb.png",
+							"status": "active",
+							"joinDate": "2019-01-15"
+						},
+						{
+							"id": "mem-001-002",
+							"name": "신상철",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-ssc.png",
+							"status": "active",
+							"joinDate": "2018-08-01"
+						},
+						{
+							"id": "mem-001-003",
+							"name": "오춘석",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-ocs.png",
+							"status": "active",
+							"joinDate": "2019-05-20"
+						},
+						{
+							"id": "mem-001-004",
+							"name": "이경화",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-lkh.png",
+							"status": "active",
+							"joinDate": "2020-02-10"
+						},
+						{
+							"id": "mem-001-005",
+							"name": "박현우",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-phw.png",
+							"status": "active",
+							"joinDate": "2020-06-01"
+						},
+						{
+							"id": "mem-001-006",
+							"name": "김지훈",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-kjh.png",
+							"status": "active",
+							"joinDate": "2020-09-15"
+						},
+						{
+							"id": "mem-001-007",
+							"name": "김민호",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-kmh.png",
+							"status": "active",
+							"joinDate": "2021-01-11"
+						},
+						{
+							"id": "mem-001-008",
+							"name": "이남곤",
+							"title": "사원",
+							"avatar": "./signage_src/images/member/member-lng.png",
+							"status": "active",
+							"joinDate": "2021-07-01"
+						},
+						{
+							"id": "mem-001-009",
+							"name": "전동수",
+							"title": "사원",
+							"avatar": "./signage_src/images/member/member-jds.png",
+							"status": "new",
+							"joinDate": "2025-11-01"
+						}
+					]
+				},
+				{
+					"id": "team-001-02",
+					"name": "서비스개발 2팀",
+					"members": [
+						{
+							"id": "mem-001-101",
+							"name": "안효진",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-ahj.png",
+							"status": "active",
+							"joinDate": "2019-02-01"
+						},
+						{
+							"id": "mem-001-102",
+							"name": "김진근",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-kjk.png",
+							"status": "active",
+							"joinDate": "2020-03-15"
+						}
+					]
+				},
+				{
+					"id": "team-001-03",
+					"name": "서비스개발 3팀",
+					"members": [
+						{
+							"id": "mem-001-201",
+							"name": "방창현",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-bch.png",
+							"status": "dispatched",
+							"joinDate": "2019-03-01"
+						},
+						{
+							"id": "mem-001-202",
+							"name": "민준홍",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-mjh.png",
+							"status": "dispatched",
+							"joinDate": "2020-05-01"
+						},
+						{
+							"id": "mem-001-103",
+							"name": "이환승",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-lhs.png",
+							"status": "dispatched",
+							"joinDate": "2020-04-01"
+						},
+						{
+							"id": "mem-001-104",
+							"name": "김미진",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-kmj.png",
+							"status": "dispatched",
+							"joinDate": "2021-01-01"
+						},
+						{
+							"id": "mem-001-105",
+							"name": "송윤근",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-syg.png",
+							"status": "dispatched",
+							"joinDate": "2021-06-01"
+						},
+						{
+							"id": "mem-001-106",
+							"name": "김태호",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-kth.png",
+							"status": "dispatched",
+							"joinDate": "2021-08-15"
+						},
+						{
+							"id": "mem-001-107",
+							"name": "나란희",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-nrh.png",
+							"status": "dispatched",
+							"joinDate": "2022-01-01"
+						},
+						{
+							"id": "mem-001-108",
+							"name": "장효정",
+							"title": "사원",
+							"avatar": "./signage_src/images/member/member-jhj.png",
+							"status": "dispatched",
+							"joinDate": "2022-07-01"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dept-002",
+			"name": "솔루션연구소",
+			"color": "solution",
+			"head": {
+				"id": "dept-002-head",
+				"name": "전대원",
+				"title": "실장",
+				"avatar": "./signage_src/images/member/member-jdw.png",
+				"status": "active",
+				"joinDate": "2017-08-01"
+			},
+			"teams": [
+				{
+					"id": "team-002-01",
+					"name": "솔루션개발 1팀",
+					"members": [
+						{
+							"id": "mem-002-001",
+							"name": "유건수",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-ygs.png",
+							"status": "active",
+							"joinDate": "2018-04-01"
+						},
+						{
+							"id": "mem-002-008",
+							"name": "장길수",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-jks.png",
+							"status": "dispatched",
+							"joinDate": "2018-09-01"
+						},
+						{
+							"id": "mem-002-002",
+							"name": "홍수남",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-hsn.png",
+							"status": "dispatched",
+							"joinDate": "2017-12-01"
+						},
+						{
+							"id": "mem-002-009",
+							"name": "노영옥",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-nyw.png",
+							"status": "dispatched",
+							"joinDate": "2019-02-01"
+						},
+						{
+							"id": "mem-002-003",
+							"name": "김별",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-kb.png",
+							"status": "active",
+							"joinDate": "2019-01-15"
+						},
+						{
+							"id": "mem-002-010",
+							"name": "채세진",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-csj.png",
+							"status": "new",
+							"joinDate": "2025-11-15"
+						},
+						{
+							"id": "mem-002-004",
+							"name": "이신실",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-lss.png",
+							"status": "new",
+							"joinDate": "2025-10-01"
+						},
+						{
+							"id": "mem-002-011",
+							"name": "이두영",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-ldy.png",
+							"status": "active",
+							"joinDate": "2021-01-01"
+						},
+						{
+							"id": "mem-002-005",
+							"name": "이범학",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-lbh.png",
+							"status": "dispatched",
+							"joinDate": "2020-02-01"
+						},
+						{
+							"id": "mem-002-012",
+							"name": "김건우",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-kgw.png",
+							"status": "dispatched",
+							"joinDate": "2021-06-01"
+						},
+						{
+							"id": "mem-002-006",
+							"name": "신영민",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-sym.png",
+							"status": "dispatched",
+							"joinDate": "2020-03-15"
+						},
+						{
+							"id": "mem-002-013",
+							"name": "박미선",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-pms.png",
+							"status": "dispatched",
+							"joinDate": "2021-09-01"
+						},
+						{
+							"id": "mem-002-007",
+							"name": "이상훈",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-lsh.png",
+							"status": "active",
+							"joinDate": "2020-06-01"
+						}
+					]
+				},
+				{
+					"id": "team-002-02",
+					"name": "솔루션개발 2팀",
+					"members": [
+						{
+							"id": "mem-002-101",
+							"name": "권기읍",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-kge.png",
+							"status": "active",
+							"joinDate": "2019-05-01"
+						},
+						{
+							"id": "mem-002-102",
+							"name": "김성진",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-ksj.png",
+							"status": "active",
+							"joinDate": "2018-11-01"
+						},
+						{
+							"id": "mem-002-103",
+							"name": "한덕규",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-hdk.png",
+							"status": "active",
+							"joinDate": "2020-01-15"
+						},
+						{
+							"id": "mem-002-104",
+							"name": "오나윤",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-ony.png",
+							"status": "dispatched",
+							"joinDate": "2021-03-01"
+						},
+						{
+							"id": "mem-002-105",
+							"name": "원윤재",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-wyj.png",
+							"status": "new",
+							"joinDate": "2025-11-01"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dept-003",
+			"name": "플랫폼개발실",
+			"color": "platform",
+			"head": {
+				"id": "dept-003-head",
+				"name": "이광호",
+				"title": "실장",
+				"avatar": "./signage_src/images/member/member-lkh-2.png",
+				"status": "active",
+				"joinDate": "2018-02-01"
+			},
+			"teams": [
+				{
+					"id": "team-003-01",
+					"name": "플랫폼개발팀",
+					"members": [
+						{
+							"id": "mem-003-001",
+							"name": "이건",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-lg.png",
+							"status": "active",
+							"joinDate": "2019-04-01"
+						},
+						{
+							"id": "mem-003-002",
+							"name": "지영관",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-jyk.png",
+							"status": "active",
+							"joinDate": "2020-02-15"
+						},
+						{
+							"id": "mem-003-003",
+							"name": "강보경",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-kbk.png",
+							"status": "active",
+							"joinDate": "2020-06-01"
+						},
+						{
+							"id": "mem-003-004",
+							"name": "최지수",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-cjs.png",
+							"status": "active",
+							"joinDate": "2021-01-01"
+						},
+						{
+							"id": "mem-003-005",
+							"name": "이수연",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-lsy.png",
+							"status": "active",
+							"joinDate": "2021-03-15"
+						},
+						{
+							"id": "mem-003-006",
+							"name": "김미진",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-kmj.png",
+							"status": "active",
+							"joinDate": "2021-07-01"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dept-004",
+			"name": "영업/기획실",
+			"color": "sales",
+			"head": null,
+			"members": [
+				{
+					"id": "mem-004-001",
+					"name": "김영준",
+					"title": "부장",
+					"avatar": "./signage_src/images/member/member-kyj.png",
+					"status": "active",
+					"joinDate": "2018-09-01"
+				},
+				{
+					"id": "mem-004-002",
+					"name": "연제봉",
+					"title": "부장",
+					"avatar": "./signage_src/images/member/member-yjb.png",
+					"status": "new",
+					"joinDate": "2025-10-15"
+				}
+			]
+		},
+		{
+			"id": "dept-005",
+			"name": "DX사업실",
+			"color": "dx",
+			"head": {
+				"id": "dept-005-head",
+				"name": "임도형",
+				"title": "실장",
+				"avatar": "./signage_src/images/member/member-ldh.png",
+				"status": "active",
+				"joinDate": "2019-01-01"
+			},
+			"teams": [
+				{
+					"id": "team-005-01",
+					"name": "UI/UX팀",
+					"members": [
+						{
+							"id": "mem-005-001",
+							"name": "박병관",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-pbk.png",
+							"status": "active",
+							"joinDate": "2019-06-01"
+						},
+						{
+							"id": "mem-005-002",
+							"name": "최윤경",
+							"title": "부장",
+							"avatar": "./signage_src/images/member/member-cyk.png",
+							"status": "active",
+							"joinDate": "2018-12-01"
+						},
+						{
+							"id": "mem-005-003",
+							"name": "구해나",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-khn.png",
+							"status": "dispatched",
+							"joinDate": "2020-01-15"
+						},
+						{
+							"id": "mem-005-004",
+							"name": "최재희",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-cjh.png",
+							"status": "dispatched",
+							"joinDate": "2020-04-01"
+						},
+						{
+							"id": "mem-005-005",
+							"name": "김민설",
+							"title": "차장",
+							"avatar": "./signage_src/images/member/member-kms.png",
+							"status": "active",
+							"joinDate": "2020-07-01"
+						},
+						{
+							"id": "mem-005-006",
+							"name": "정승원",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-jsw.png",
+							"status": "dispatched",
+							"joinDate": "2021-02-01"
+						},
+						{
+							"id": "mem-005-007",
+							"name": "곽민정",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-kmj-3.png",
+							"status": "active",
+							"joinDate": "2021-04-01"
+						},
+						{
+							"id": "mem-005-008",
+							"name": "정서영",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-jsy.png",
+							"status": "dispatched",
+							"joinDate": "2021-08-01"
+						},
+						{
+							"id": "mem-005-009",
+							"name": "구서연",
+							"title": "대리",
+							"avatar": "./signage_src/images/member/member-ksy.png",
+							"status": "dispatched",
+							"joinDate": "2022-01-01"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "dept-006",
+			"name": "경영관리팀",
+			"color": "management",
+			"head": null,
+			"teams": [
+				{
+					"id": "team-006-01",
+					"name": "경영관리팀",
+					"members": [
+						{
+							"id": "mem-006-001",
+							"name": "전대경",
+							"title": "팀장",
+							"avatar": "./signage_src/images/member/member-jdk.png",
+							"status": "active",
+							"joinDate": "2017-11-01"
+						},
+						{
+							"id": "mem-006-002",
+							"name": "유지수",
+							"title": "과장",
+							"avatar": "./signage_src/images/member/member-yjs.png",
+							"status": "active",
+							"joinDate": "2019-08-01"
+						}
+					]
+				}
+			]
+		}
+	]
+}

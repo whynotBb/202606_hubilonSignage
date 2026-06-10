@@ -1,0 +1,974 @@
+/* ════════════════════════════════════════════════════
+   Reset
+════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: #050d2a;
+}
+
+body {
+	font-family: "Paperlogy", sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* ════════════════════════════════════════════════════
+   Swiper 풀화면
+════════════════════════════════════════════════════ */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+}
+
+/* ════════════════════════════════════════════════════
+   CSS Variables
+════════════════════════════════════════════════════ */
+:root {
+	/* 기본 컬러 */
+	--color-blue: #3a86fe;
+	--color-cyan: #00c7dd;
+	--color-green: #3dd179;
+	--color-lime: #a8c900;
+	--color-orange: #ff8c00;
+	--color-pink: #f048ad;
+	--color-purple: #c925ff;
+	--color-gray-lt: #ccd2db;
+	--color-gray: #6b7998;
+	--color-black: #000000;
+
+	/* 그라데이션 */
+	--gradient: linear-gradient(99deg, #00b9ff -2.77%, #e0d900 104.75%);
+	--gradient-new: linear-gradient(91deg, #00e1ff 30.64%, #43e000 71.36%);
+	--gradient-pink: linear-gradient(91deg, #c925ff 30.64%, #f048ad 71.36%);
+}
+
+/* ════════════════════════════════════════════════════
+   Slide 1 : 조직도
+════════════════════════════════════════════════════ */
+.contents-wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/* 배경 이미지 클래스 */
+.contents-wrapper.bg-default {
+	background-image: url(../images/bg-default.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.contents-wrapper.bg-white {
+	background-color: #fff;
+}
+
+.contents-wrapper.bg-blue {
+	background-image: url(../images/bg-blue.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.contents-wrapper.bg-pink {
+	background-image: url(../images/bg-pink.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.org-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 2.917vw 3.125vw 2.5vw;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 0.833vw;
+	justify-content: center;
+}
+
+/* ────────────────────────────────
+   헤더 (로고 + 임원)
+──────────────────────────────── */
+.org-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.org-logo {
+	width: 10.417vw;
+	height: 1.563vw;
+	flex-shrink: 0;
+	position: fixed;
+	top: 2.917vw;
+	left: 3.125vw;
+}
+
+.org-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* ────────────────────────────────
+   실별 목록
+──────────────────────────────── */
+.org-dept-list {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 0.417vw;
+	/* flex: 1; */
+	min-height: 0;
+}
+
+/* ─ 실 컨테이너 */
+.org-dept {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.417vw;
+	overflow: hidden;
+}
+
+/* ─ 실 이름 (pill) */
+.org-dept-name {
+	display: flex;
+	height: 2.5vw;
+	width: 8.333vw;
+	justify-content: center;
+	align-items: center;
+	gap: 0.208vw;
+	align-self: stretch;
+	border-radius: 52.031vw;
+	font-size: 1.094vw;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	margin: 0 auto;
+}
+
+/* 부서별 색상 매핑 (JSON의 color 값과 매핑)
+   - service → blue (서비스개발실)
+   - solution → cyan (솔루션연구소)
+   - platform → green (플랫폼개발실)
+   - sales → lime (영업/기획실)
+   - dx → orange (DX사업실)
+   - management → pink (경영관리팀)
+*/
+.org-dept-service .org-dept-name {
+	background: var(--color-blue);
+}
+.org-dept-solution .org-dept-name {
+	background: var(--color-cyan);
+}
+.org-dept-platform .org-dept-name {
+	background: var(--color-green);
+}
+.org-dept-sales .org-dept-name {
+	background: var(--color-lime);
+}
+.org-dept-dx .org-dept-name {
+	background: var(--color-orange);
+}
+.org-dept-management .org-dept-name {
+	background: var(--color-pink);
+}
+
+/* ─ 실장 영역 */
+.org-dept-head {
+	flex-shrink: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/* ────────────────────────────────
+   팀 목록
+──────────────────────────────── */
+.org-team-list {
+	padding-top: 0.625vw;
+	display: flex;
+	gap: 0.313vw;
+	flex: 1;
+	min-height: 0;
+	width: 100%;
+	align-items: flex-start;
+}
+
+/* ─ 팀 컨테이너 */
+.org-team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.26vw;
+	flex: 1;
+	min-width: 0;
+}
+
+/* ─ 10명 이상 팀: 2열 레이아웃 */
+.org-team-wide {
+	flex: 2;
+}
+
+.org-team-wide .org-member-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.208vw;
+	column-gap: 0.313vw;
+}
+
+/* ─ 실 없이 팀만 있는 케이스 (경영관리팀 등):
+     실명(48) + gap(8) + 실장(58) + gap(8) + 팀목록패딩(12) = 134px 오프셋 */
+.org-dept-team-only {
+	padding-top: 6.979vw;
+}
+
+.org-dept-team-only .org-team-list {
+	padding-top: 0;
+}
+
+/* ─ 팀 없이 실만 있는 케이스 (영업/기획실 등):
+     실장(58) + gap(8) + 팀목록패딩(12) + 팀명(40) + 팀내갭(5) = 123px 오프셋 */
+.org-dept-no-teams .org-member-list {
+	margin-top: 6.406vw;
+}
+
+/* ─ 팀 이름 (pill) */
+.org-team-name {
+	display: flex;
+	width: 8.333vw;
+	height: 2.083vw;
+	justify-content: center;
+	align-items: center;
+	gap: 0.208vw;
+	border-radius: 5.156vw;
+	color: #fff;
+	font-size: 0.833vw;
+}
+
+.org-team-name em {
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* 팀명 색상 (부서별 색상 상속) */
+.org-dept-service .org-team-name {
+	background: var(--color-blue);
+}
+.org-dept-solution .org-team-name {
+	background: var(--color-cyan);
+}
+.org-dept-platform .org-team-name {
+	background: var(--color-green);
+}
+.org-dept-sales .org-team-name {
+	background: var(--color-lime);
+}
+.org-dept-dx .org-team-name {
+	background: var(--color-orange);
+}
+.org-dept-management .org-team-name {
+	background: var(--color-pink);
+}
+
+/* ────────────────────────────────
+   직원 아이템
+──────────────────────────────── */
+.org-member-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.208vw;
+	width: 100%;
+}
+
+.org-member {
+	display: flex;
+	align-items: center;
+	gap: 0.625vw;
+	border-radius: 0.521vw;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+	width: 8.403vw;
+	height: 3.021vw;
+	padding: 0.469vw 0.313vw 0.469vw 0.833vw;
+	border: 1px solid var(--color-gray-lt);
+}
+
+/* 우측 실 컬러 바 */
+.org-member::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 0.3125vw 0 0 0.3125vw;
+	width: 0.313vw;
+	height: 2.083vw;
+}
+
+/* 직원 카드 border 색상 (부서별 색상 상속) */
+.org-dept-service .org-member {
+	border-color: var(--color-blue);
+}
+.org-dept-solution .org-member {
+	border-color: var(--color-cyan);
+}
+.org-dept-platform .org-member {
+	border-color: var(--color-green);
+}
+.org-dept-sales .org-member {
+	border-color: var(--color-lime);
+}
+.org-dept-dx .org-member {
+	border-color: var(--color-orange);
+}
+.org-dept-management .org-member {
+	border-color: var(--color-pink);
+}
+
+/* 직원 카드 우측 색상 바 (부서별 색상 상속) */
+.org-dept-service .org-member::after {
+	background: var(--color-blue);
+}
+.org-dept-solution .org-member::after {
+	background: var(--color-cyan);
+}
+.org-dept-platform .org-member::after {
+	background: var(--color-green);
+}
+.org-dept-sales .org-member::after {
+	background: var(--color-lime);
+}
+.org-dept-dx .org-member::after {
+	background: var(--color-orange);
+}
+.org-dept-management .org-member::after {
+	background: var(--color-pink);
+}
+
+/* ─ 파견자 */
+.org-member.org-member-dispatched::after {
+	background: var(--color-gray-lt);
+}
+
+.org-member-avatar {
+	width: 2.083vw;
+	height: 2.083vw;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+	background: var(--color-gray-lt);
+}
+
+.org-member-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.365vw;
+	line-height: 1.2;
+	min-width: 0;
+}
+
+.org-member-title {
+	font-size: 0.625vw;
+	font-weight: 500;
+	line-height: 1;
+	color: var(--color-gray);
+}
+
+.org-member-name {
+	line-height: 1;
+	font-size: 0.833vw;
+	font-weight: 600;
+	color: #000000;
+	white-space: nowrap;
+}
+
+/* ─ 신규입사자 */
+.org-member-new {
+	position: relative;
+}
+
+.org-member-new::before {
+	content: "";
+	width: 0.573vw;
+	height: 0.573vw;
+	background: url(../images/label_new.svg) no-repeat center center / contain;
+	position: absolute;
+	top: 0.547vw;
+	left: 0.781vw;
+	z-index: 1;
+}
+
+/* ─ 임원 리스트 (CEO / VP 배치) */
+.org-executive-list {
+	position: relative;
+	width: 100%;
+	padding-top: 3.333vw;
+	padding-bottom: 1.25vw;
+	padding-right: 24.063vw;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* ─ CEO 카드 */
+.org-member-ceo {
+	width: 12.5vw;
+	height: 4.583vw;
+	display: flex;
+	align-items: center;
+	gap: 0.729vw;
+	padding: 0.521vw 1.458vw 0.521vw 0.625vw;
+	border-radius: 0.729vw;
+	background: var(--gradient);
+	border: none;
+	flex-shrink: 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: visible;
+}
+
+.org-member-ceo .org-member-avatar-wrapper {
+	width: 5.208vw;
+	height: 100%;
+	background: none;
+	position: relative;
+	z-index: 10;
+}
+.org-member-ceo .org-member-avatar-wrapper img {
+	position: absolute;
+	bottom: -0.521vw;
+	left: 0;
+	width: 100%;
+	height: 5.938vw;
+	object-fit: cover;
+}
+
+.org-member-ceo .org-member-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.365vw;
+}
+
+.org-member-ceo .org-member-title {
+	font-size: 0.729vw;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.org-member-ceo .org-member-name {
+	font-size: 1.146vw;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 0.05em;
+}
+
+/* ─ VP 카드 */
+.org-member-vp {
+	width: 9.375vw;
+	height: 3.646vw;
+	display: flex;
+	align-items: center;
+	gap: 0.521vw;
+	padding: 0.469vw 0.469vw 0.469vw 1.25vw;
+	border-radius: 0.729vw;
+	background: var(--gradient);
+	border: none;
+	flex-shrink: 0;
+}
+
+.org-member-vp .org-member-avatar {
+	width: 2.292vw;
+	height: 2.292vw;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.org-member-vp .org-member-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.365vw;
+}
+
+.org-member-vp .org-member-title {
+	font-size: 0.625vw;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.org-member-vp .org-member-name {
+	font-size: 0.833vw;
+	font-weight: 800;
+	color: #fff;
+	letter-spacing: 0.04em;
+}
+
+/* ════════════════════════════════════════════════════
+   Gradient Text Utility
+════════════════════════════════════════════════════ */
+.text-gradient {
+	background: var(--gradient-new);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.bg-pink .text-gradient {
+	background: var(--gradient-pink);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+/* ════════════════════════════════════════════════════
+   Pagination
+════════════════════════════════════════════════════ */
+.swiper-pagination {
+	bottom: 9.375vw !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.042vw;
+}
+
+.swiper-pagination.swiper-pagination-hidden {
+	display: none;
+}
+
+.swiper-pagination-bullet {
+	width: 1.042vw;
+	height: 1.042vw;
+	border: 0.156vw solid #fff;
+	border-radius: 50%;
+	background: transparent;
+	opacity: 1;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+	width: 3.125vw;
+	height: 1.042vw;
+	border-radius: 5.208vw;
+	background: #fff;
+}
+
+/* ════════════════════════════════════════════════════
+   Legend
+════════════════════════════════════════════════════ */
+.org-legend-list {
+	position: absolute;
+	bottom: 4.167vw;
+	right: 3.646vw;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625vw;
+}
+
+.org-legend-item {
+	display: flex;
+	gap: 0.3125vw;
+	font-size: 1.042vw;
+	line-height: 1;
+	font-weight: 500;
+	color: #fff;
+}
+
+.org-legend-item-icon {
+	width: 1.042vw;
+	height: 1.042vw;
+	background: var(--color-gray-lt);
+	border-radius: 50%;
+}
+
+.org-legend-item-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* ────────────────────────────────
+   Welcome
+──────────────────────────────── */
+.welcome-wrapper {
+	padding: 10.938vw 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.welcome-title {
+	font-size: 8.594vw;
+	font-weight: 700;
+	letter-spacing: 0.172vw;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.042vw;
+	line-height: normal;
+}
+
+.welcome-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.welcome-title h2 {
+	text-align: center;
+	font-size: 4.688vw;
+	font-style: normal;
+}
+
+.welcome-title h4 {
+	text-align: center;
+	font-size: 6vw;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.welcome-title h4 span {
+	font-size: 7.5vw;
+	font-style: normal;
+	font-weight: 400;
+	margin-left: 0.521vw;
+}
+
+.welcome-info {
+	margin: 3.125vw 0 0;
+	color: #fff;
+	font-size: 2.865vw;
+	font-weight: 400;
+	line-height: normal;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.042vw;
+}
+
+.welcome-info.text-lg {
+	font-size: 7vw;
+	font-weight: 700;
+}
+
+.welcome-info span {
+	font-size: 4.688vw;
+	font-weight: 300;
+}
+
+.welcome-info span b {
+	font-weight: 700;
+	margin-right: 0.521vw;
+}
+
+.welcome-date {
+	color: #fff;
+	font-size: 1.875vw;
+	font-weight: 400;
+	line-height: 1;
+	margin-top: auto;
+	margin-bottom: 1.51vw;
+}
+
+.welcome-content .location {
+	font-size: 1.875vw;
+	font-weight: 400;
+	line-height: 1;
+	color: #fff;
+}
+/* ────────────────────────────────
+   News
+──────────────────────────────── */
+.news-wrapper {
+	padding: 9.896vw 0 12vw 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.news-header {
+	font-size: 4.688vw;
+	font-weight: 700;
+	color: #fff;
+	line-height: normal;
+	margin-bottom: 3.333vw;
+}
+
+.news-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	position: relative;
+	width: 72.917vw;
+}
+
+.news-content::before,
+.news-content::after {
+	content: "";
+	position: absolute;
+	width: 7.073vw;
+	height: 6.25vw;
+	background: url(../images/icon-quote.svg) no-repeat center center / contain;
+}
+
+.news-content::before {
+	transform: rotate(180deg);
+	top: -3.906vw;
+	left: -1.042vw;
+}
+
+.news-content::after {
+	bottom: 0;
+	right: -1.042vw;
+}
+
+.news-content.img-news::after {
+	display: none;
+}
+
+.news-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.news-title {
+	font-size: 6.25vw;
+	font-weight: 700;
+	color: #fff;
+	line-height: 110%;
+	letter-spacing: 0.125vw;
+	margin-bottom: 2.604vw;
+}
+
+.news-description {
+	font-size: 4.167vw;
+	font-weight: 600;
+	color: #fff;
+	line-height: 110%;
+	letter-spacing: 0.083vw;
+}
+
+.news-date {
+	font-size: 1.875vw;
+	font-weight: 400;
+	color: #fff;
+	line-height: 100%;
+	margin-top: auto;
+}
+
+.news-content.img-news {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 4.167vw;
+}
+
+.news-content.img-news .image-wrapper {
+	width: 23.958vw;
+	height: 20.833vw;
+	border-radius: 1.042vw;
+	border: 0.26vw solid #fff;
+	background: #fff;
+	overflow: hidden;
+}
+
+.news-content.img-news .image-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.news-content.img-news .news-info {
+	align-items: flex-start;
+}
+.news-content.img-news .news-title {
+	font-size: 5.729vw;
+	margin-bottom: 2.604vw;
+}
+
+.news-content.img-news .news-description {
+	font-size: 3.646vw;
+}
+
+.news-content.img-news .news-date {
+	font-size: 1.875vw;
+}
+
+/* ════════════════════════════════════════════════════
+   Features
+════════════════════════════════════════════════════ */
+.featuresWrap {
+	padding: 4.167vw 3.646vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.featuresWrap .feature-logo {
+	width: 10.417vw;
+	height: 4.167vw;
+	position: absolute;
+	top: 1.042vw;
+	left: 1.563vw;
+}
+
+.featuresWrap .feature-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.featuresWrap .title {
+	text-align: center;
+}
+
+.featuresWrap .title h3 {
+	font-size: 3.125vw;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 1.51vw;
+}
+
+.featuresWrap .title p {
+	font-size: 1.458vw;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.featuresWrap .contentsWrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.042vw;
+	padding: 2.604vw 0;
+}
+
+.featuresWrap .contentsWrap .imgWrap {
+	width: 50%;
+}
+
+.featuresWrap .contentsWrap .imgWrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.featuresWrap .contentsWrap .contents {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2.344vw;
+	flex: 1;
+}
+
+.featuresWrap .contentsWrap .contents li {
+	padding-left: 4.167vw;
+	position: relative;
+}
+
+.featuresWrap .contentsWrap .contents li span {
+	width: 3.125vw;
+	height: 3.125vw;
+	border-radius: 50%;
+	background: #8ad5eb;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.833vw;
+	font-weight: 500;
+	color: #fff;
+}
+
+.featuresWrap .contentsWrap .contents li span.bg-coral {
+	background: #ff796d;
+}
+
+.featuresWrap .contentsWrap .contents li h4 {
+	font-size: 1.458vw;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 0.99vw;
+	padding-top: 0.521vw;
+}
+
+.featuresWrap .contentsWrap .contents li p {
+	font-size: 1.042vw;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #606060;
+	word-break: keep-all;
+}
