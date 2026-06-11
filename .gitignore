@@ -1,1 +1,5 @@
 .DS_Store
+
+# 개인정보 보호 - git 추적 제외
+data/
+images/member/
